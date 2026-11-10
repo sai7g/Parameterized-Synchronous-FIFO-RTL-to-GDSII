@@ -1,0 +1,1006 @@
+{
+  "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+  "modules": {
+    "sync_fifo": {
+      "attributes": {
+        "hdlname": "sync_fifo",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/work/rtl/sync_fifo.v:33.1-93.10"
+      },
+      "parameter_default_values": {
+        "ADDR_WIDTH": "00000000000000000000000000000100",
+        "ALMOST_EMPTY_LEVEL": "00000000000000000000000000000010",
+        "ALMOST_FULL_LEVEL": "00000000000000000000000000001110",
+        "DATA_WIDTH": "00000000000000000000000000001000"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst_n": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "wr_en": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "wr_data": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ]
+        },
+        "rd_en": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "rd_data": {
+          "direction": "output",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ]
+        },
+        "full": {
+          "direction": "output",
+          "bits": [ 22 ]
+        },
+        "empty": {
+          "direction": "output",
+          "bits": [ 23 ]
+        },
+        "almost_full": {
+          "direction": "output",
+          "bits": [ 24 ]
+        },
+        "almost_empty": {
+          "direction": "output",
+          "bits": [ 25 ]
+        },
+        "occupancy": {
+          "direction": "output",
+          "bits": [ 26, 27, 28, 29, 30 ]
+        }
+      },
+      "cells": {
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:79$15": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:79.34-79.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28, 29, 30 ],
+            "B": [ "1" ],
+            "Y": [ 31, 32, 33, 34, 35 ]
+          }
+        },
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:98$19": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:98.34-98.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36, 37, 38, 39 ],
+            "B": [ "1" ],
+            "Y": [ 40, 41, 42, 43 ]
+          }
+        },
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:99$20": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:99.34-99.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 44, 45, 46, 47 ],
+            "B": [ "1" ],
+            "Y": [ 48, 49, 50, 51 ]
+          }
+        },
+        "$flatten\\u_ctrl.$and$/work/rtl/fifo_ctrl.v:69$11": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:69.18-69.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 52 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$flatten\\u_ctrl.$and$/work/rtl/fifo_ctrl.v:70$13": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:70.18-70.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 54 ],
+            "Y": [ 55 ]
+          }
+        },
+        "$flatten\\u_ctrl.$eq$/work/rtl/fifo_ctrl.v:102$21": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:102.32-102.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56, 57, 58, 59, 60 ],
+            "B": [ "0", "0", "0", "0", "1" ],
+            "Y": [ 61 ]
+          }
+        },
+        "$flatten\\u_ctrl.$eq$/work/rtl/fifo_ctrl.v:103$22": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:103.32-103.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56, 57, 58, 59, 60 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$flatten\\u_ctrl.$ge$/work/rtl/fifo_ctrl.v:104$23": {
+          "hide_name": 1,
+          "type": "$ge",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:104.32-104.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56, 57, 58, 59, 60 ],
+            "B": [ "0", "1", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 63 ]
+          }
+        },
+        "$flatten\\u_ctrl.$le$/work/rtl/fifo_ctrl.v:105$24": {
+          "hide_name": 1,
+          "type": "$le",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:105.32-105.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 56, 57, 58, 59, 60 ],
+            "B": [ "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 64 ]
+          }
+        },
+        "$flatten\\u_ctrl.$not$/work/rtl/fifo_ctrl.v:69$10": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:69.27-69.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "Y": [ 52 ]
+          }
+        },
+        "$flatten\\u_ctrl.$not$/work/rtl/fifo_ctrl.v:70$12": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:70.27-70.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$49": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 65, 66, 67, 68 ],
+            "Q": [ 36, 37, 38, 39 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$54": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 69, 70, 71, 72 ],
+            "Q": [ 44, 45, 46, 47 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$59": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 56, 57, 58, 59, 60 ],
+            "Q": [ 26, 27, 28, 29, 30 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$64": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 61 ],
+            "Q": [ 22 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$69": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 62 ],
+            "Q": [ 23 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$74": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 63 ],
+            "Q": [ 24 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procdff$79": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 64 ],
+            "Q": [ 25 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$34": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:99.17-99.22|/work/rtl/fifo_ctrl.v:99.13-99.48"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 44, 45, 46, 47 ],
+            "B": [ 48, 49, 50, 51 ],
+            "S": [ 55 ],
+            "Y": [ 69, 70, 71, 72 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$36": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:98.17-98.22|/work/rtl/fifo_ctrl.v:98.13-98.48"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36, 37, 38, 39 ],
+            "B": [ 40, 41, 42, 43 ],
+            "S": [ 53 ],
+            "Y": [ 65, 66, 67, 68 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$39": {
+          "hide_name": 1,
+          "type": "$pmux",
+          "parameters": {
+            "S_WIDTH": "00000000000000000000000000000010",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_ctrl.v:0.0-0.0|/work/rtl/fifo_ctrl.v:78.9-82.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28, 29, 30 ],
+            "B": [ 73, 74, 75, 76, 77, 31, 32, 33, 34, 35 ],
+            "S": [ 78, 79 ],
+            "Y": [ 56, 57, 58, 59, 60 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$40_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_ctrl.v:0.0-0.0|/work/rtl/fifo_ctrl.v:78.9-82.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 53 ],
+            "B": [ "1", "0" ],
+            "Y": [ 78 ]
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$41_CMP0": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_ctrl.v:0.0-0.0|/work/rtl/fifo_ctrl.v:78.9-82.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55, 53 ],
+            "B": [ "0", "1" ],
+            "Y": [ 79 ]
+          }
+        },
+        "$flatten\\u_ctrl.$sub$/work/rtl/fifo_ctrl.v:80$16": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:80.34-80.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26, 27, 28, 29, 30 ],
+            "B": [ "1" ],
+            "Y": [ 73, 74, 75, 76, 77 ]
+          }
+        },
+        "$flatten\\u_mem.$auto$proc_memwr.cc:45:proc_memwr$80": {
+          "hide_name": 1,
+          "type": "$memwr_v2",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000100",
+            "CLK_ENABLE": "1",
+            "CLK_POLARITY": "1",
+            "MEMID": "\\u_mem.mem",
+            "PORTID": "00000000000000000000000000000000",
+            "PRIORITY_MASK": "",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_mem.v:35.13-35.36"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "input",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 80, 81, 82, 83 ],
+            "CLK": [ 2 ],
+            "DATA": [ 84, 85, 86, 87, 88, 89, 90, 91 ],
+            "EN": [ 92, 93, 94, 95, 96, 97, 98, 99 ]
+          }
+        },
+        "$flatten\\u_mem.$memrd$\\mem$/work/rtl/fifo_mem.v:39$9": {
+          "hide_name": 1,
+          "type": "$memrd",
+          "parameters": {
+            "ABITS": "00000000000000000000000000000100",
+            "CLK_ENABLE": "00000000000000000000000000000000",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "MEMID": "\\u_mem.mem",
+            "TRANSPARENT": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/work/rtl/fifo_mem.v:39.22-39.25"
+          },
+          "port_directions": {
+            "ADDR": "input",
+            "CLK": "input",
+            "DATA": "output",
+            "EN": "input"
+          },
+          "connections": {
+            "ADDR": [ 44, 45, 46, 47 ],
+            "CLK": [ "x" ],
+            "DATA": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+            "EN": [ "x" ]
+          }
+        },
+        "$flatten\\u_mem.$procmux$26": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_mem.v:34.13-34.18|/work/rtl/fifo_mem.v:34.9-35.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "S": [ 53 ],
+            "Y": [ 92, 93, 94, 95, 96, 97, 98, 99 ]
+          }
+        },
+        "$flatten\\u_mem.$procmux$29": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_mem.v:34.13-34.18|/work/rtl/fifo_mem.v:34.9-35.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+            "S": [ 53 ],
+            "Y": [ 84, 85, 86, 87, 88, 89, 90, 91 ]
+          }
+        },
+        "$flatten\\u_mem.$procmux$32": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/work/rtl/fifo_mem.v:34.13-34.18|/work/rtl/fifo_mem.v:34.9-35.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x" ],
+            "B": [ 36, 37, 38, 39 ],
+            "S": [ 53 ],
+            "Y": [ 80, 81, 82, 83 ]
+          }
+        }
+      },
+      "memories": {
+        "u_mem.mem": {
+          "hide_name": 0,
+          "attributes": {
+            "hdlname": "u_mem mem",
+            "src": "/work/rtl/fifo_mem.v:30.26-30.29"
+          },
+          "width": 8,
+          "start_offset": 0,
+          "size": 16
+        }
+      },
+      "netnames": {
+        "$flatten\\u_ctrl.$0\\almost_empty_r[0:0]": {
+          "hide_name": 1,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$0\\almost_full_r[0:0]": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$0\\empty_r[0:0]": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$0\\full_r[0:0]": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$0\\rd_ptr[3:0]": {
+          "hide_name": 1,
+          "bits": [ 69, 70, 71, 72 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$0\\wr_ptr[3:0]": {
+          "hide_name": 1,
+          "bits": [ 65, 66, 67, 68 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:88.5-107.8"
+          }
+        },
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:79$15_Y": {
+          "hide_name": 1,
+          "bits": [ 31, 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:79.34-79.46"
+          }
+        },
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:98$19_Y": {
+          "hide_name": 1,
+          "bits": [ 40, 41, 42, 43 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:98.34-98.47"
+          }
+        },
+        "$flatten\\u_ctrl.$add$/work/rtl/fifo_ctrl.v:99$20_Y": {
+          "hide_name": 1,
+          "bits": [ 48, 49, 50, 51 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:99.34-99.47"
+          }
+        },
+        "$flatten\\u_ctrl.$not$/work/rtl/fifo_ctrl.v:69$10_Y": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:69.27-69.34"
+          }
+        },
+        "$flatten\\u_ctrl.$not$/work/rtl/fifo_ctrl.v:70$12_Y": {
+          "hide_name": 1,
+          "bits": [ 54 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:70.27-70.35"
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$40_CMP": {
+          "hide_name": 1,
+          "bits": [ 78 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_ctrl.$procmux$41_CMP": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\u_ctrl.$sub$/work/rtl/fifo_ctrl.v:80$16_Y": {
+          "hide_name": 1,
+          "bits": [ 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_ctrl.v:80.34-80.46"
+          }
+        },
+        "$flatten\\u_mem.$0$memwr$\\mem$/work/rtl/fifo_mem.v:35$1_ADDR[3:0]$3": {
+          "hide_name": 1,
+          "bits": [ 80, 81, 82, 83 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_mem.v:33.5-36.8"
+          }
+        },
+        "$flatten\\u_mem.$0$memwr$\\mem$/work/rtl/fifo_mem.v:35$1_DATA[7:0]$4": {
+          "hide_name": 1,
+          "bits": [ 84, 85, 86, 87, 88, 89, 90, 91 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_mem.v:33.5-36.8"
+          }
+        },
+        "$flatten\\u_mem.$0$memwr$\\mem$/work/rtl/fifo_mem.v:35$1_EN[7:0]$5": {
+          "hide_name": 1,
+          "bits": [ 92, 93, 94, 95, 96, 97, 98, 99 ],
+          "attributes": {
+            "src": "/work/rtl/fifo_mem.v:33.5-36.8"
+          }
+        },
+        "almost_empty": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:54.34-54.46"
+          }
+        },
+        "almost_full": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:53.34-53.45"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:39.34-39.37"
+          }
+        },
+        "empty": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:52.34-52.39"
+          }
+        },
+        "full": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:51.34-51.38"
+          }
+        },
+        "mem_wr_en": {
+          "hide_name": 0,
+          "bits": [ 53 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:60.27-60.36"
+          }
+        },
+        "occupancy": {
+          "hide_name": 0,
+          "bits": [ 26, 27, 28, 29, 30 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:55.34-55.43"
+          }
+        },
+        "rd_addr": {
+          "hide_name": 0,
+          "bits": [ 44, 45, 46, 47 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:59.27-59.34"
+          }
+        },
+        "rd_data": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:48.34-48.41"
+          }
+        },
+        "rd_en": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:47.34-47.39"
+          }
+        },
+        "rst_n": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:40.34-40.39"
+          }
+        },
+        "u_ctrl.count_nxt": {
+          "hide_name": 0,
+          "bits": [ 56, 57, 58, 59, 60 ],
+          "attributes": {
+            "hdlname": "u_ctrl count_nxt",
+            "src": "/work/rtl/fifo_ctrl.v:75.24-75.33"
+          }
+        },
+        "u_ctrl.do_rd": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+            "hdlname": "u_ctrl do_rd",
+            "src": "/work/rtl/fifo_ctrl.v:70.10-70.15"
+          }
+        },
+        "u_ctrl.wr_addr": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39 ],
+          "attributes": {
+            "hdlname": "u_ctrl wr_addr",
+            "src": "/work/rtl/fifo_ctrl.v:41.34-41.41"
+          }
+        },
+        "wr_data": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:44.34-44.41"
+          }
+        },
+        "wr_en": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/work/rtl/sync_fifo.v:43.34-43.39"
+          }
+        }
+      }
+    }
+  }
+}

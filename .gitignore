@@ -1,0 +1,13 @@
+# OpenLane intermediate runs (preserved locally)
+runs/
+
+# Generated simulation artifacts
+simv
+*.vcd
+*.out
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

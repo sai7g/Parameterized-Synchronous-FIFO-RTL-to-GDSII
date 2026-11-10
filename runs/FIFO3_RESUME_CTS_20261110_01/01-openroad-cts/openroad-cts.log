@@ -1,0 +1,128 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/work/runs/FIFO3_RESUME_DETAILEDPLACEMENT_20261110_01/01-openroad-detailedplacement/sync_fifo.odb'…
+Reading design constraints file at '/work/synthesis/sync_fifo.sdc'…
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Setting RC values…
+[INFO] Configuring cts characterization…
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk
+[INFO] Running Clock Tree Synthesis…
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_2
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0007] Net "clk" found for clock "core_clk".
+[INFO CTS-0010]  Clock net "clk" has 145 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 145.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(12685, 15020), (106915, 112940)].
+[INFO CTS-0024]  Normalized sink region: [(0.932721, 1.10441), (7.8614, 8.30441)].
+[INFO CTS-0025]     Width:  6.9287.
+[INFO CTS-0026]     Height: 7.2000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 73
+    Sub-region size: 6.9287 X 3.6000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 37
+    Sub-region size: 3.4643 X 3.6000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 19
+    Sub-region size: 3.4643 X 1.8000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 10
+    Sub-region size: 1.7322 X 1.8000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 145.
+[INFO CTS-0018]     Created 17 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 17 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 7:4, 8:1, 9:7, 10:1, 11:1, 12:1, 13:1..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 160
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 163.21 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Leaf load cells 15
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 6335um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                78     292.78
+  Tap cell                                164     205.20
+  Clock buffer                             19     266.51
+  Timing Repair Buffer                     30     145.14
+  Inverter                                  2       7.51
+  Clock inverter                           13     257.75
+  Sequential cell                         145    3026.65
+  Multi-Input combinational cell          236    3111.73
+  Total                                   687    7313.26
+Writing OpenROAD database to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.odb'…
+Writing netlist to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.nl.v'…
+Writing powered netlist to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.pnl.v'…
+Writing layout to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.def'…
+Writing timing constraints to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.sdc'…
+[INFO] Legalizing…
+Placement Analysis
+---------------------------------
+total displacement        439.0 u
+average displacement        0.6 u
+max displacement           11.0 u
+original HPWL            8699.5 u
+legalized HPWL           9438.0 u
+delta HPWL                    8 %
+
+[INFO DPL-0020] Mirrored 124 instances
+[INFO DPL-0021] HPWL before            9438.0 u
+[INFO DPL-0022] HPWL after             9013.5 u
+[INFO DPL-0023] HPWL delta               -4.5 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                78     292.78
+  Tap cell                                164     205.20
+  Clock buffer                             19     266.51
+  Timing Repair Buffer                     30     145.14
+  Inverter                                  2       7.51
+  Clock inverter                           13     257.75
+  Sequential cell                         145    3026.65
+  Multi-Input combinational cell          236    3111.73
+  Total                                   687    7313.26
+Writing OpenROAD database to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.odb'…
+Writing netlist to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.nl.v'…
+Writing powered netlist to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.pnl.v'…
+Writing layout to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.def'…
+Writing timing constraints to '/work/runs/FIFO3_RESUME_CTS_20261110_01/01-openroad-cts/sync_fifo.sdc'…
+%OL_CREATE_REPORT cts.rpt
+[INFO CTS-0003] Total number of Clock Roots: 1.
+[INFO CTS-0004] Total number of Buffers Inserted: 17.
+[INFO CTS-0005] Total number of Clock Subnets: 17.
+[INFO CTS-0006] Total number of Sinks: 145.
+%OL_END_REPORT

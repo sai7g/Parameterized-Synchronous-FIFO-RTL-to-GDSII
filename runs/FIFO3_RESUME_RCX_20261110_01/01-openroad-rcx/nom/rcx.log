@@ -1,0 +1,40 @@
+Reading technology LEF file at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef'…
+[INFO ODB-0227] LEF file: /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef, created 14 layers, 25 vias
+Reading cell LEF file at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef'…
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef, created 4 library cells
+Reading cell LEF file at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef'…
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+[INFO ODB-0127] Reading DEF file: /work/runs/FIFO3_RESUME_CELLFREQUENCYTABLES_20261110_01/01-odb-cellfrequencytables/sync_fifo.def
+[INFO ODB-0128] Design: sync_fifo
+[INFO ODB-0130]     Created 31 pins.
+[INFO ODB-0131]     Created 1328 components and 6871 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 4984 connections.
+[INFO ODB-0133]     Created 582 nets and 1872 connections.
+[INFO ODB-0134] Finished DEF file: /work/runs/FIFO3_RESUME_CELLFREQUENCYTABLES_20261110_01/01-odb-cellfrequencytables/sync_fifo.def
+Using RCX ruleset '/pdkroot/sky130A/libs.tech/openlane/rules.openrcx.sky130A.nom.calibre'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
+[INFO RCX-0435] Reading extraction model file /pdkroot/sky130A/libs.tech/openlane/rules.openrcx.sky130A.nom.calibre ...
+[INFO RCX-0436] RC segment generation sync_fifo (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 2088 rc segments
+[INFO RCX-0439] Coupling Cap extraction sync_fifo ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 52% of 3976 wires extracted
+[INFO RCX-0442] 100% of 3976 wires extracted
+[INFO RCX-0045] Extract 582 nets, 2669 rsegs, 2669 caps, 4474 ccs
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               580    2957.84
+  Tap cell                                164     205.20
+  Standard cell                           584    8206.62
+  Total                                  1328   11369.65
+Writing extracted parasitics to '/work/runs/FIFO3_RESUME_RCX_20261110_01/01-openroad-rcx/nom/sync_fifo.nom.spef'…
+[INFO RCX-0443] 582 nets finished

@@ -1,0 +1,9 @@
+read_verilog -sv rtl/fifo_mem.v rtl/fifo_ctrl.v rtl/sync_fifo.v
+hierarchy -check -top sync_fifo
+synth -top sync_fifo -flatten -noabc
+dfflibmap -liberty /mnt/d/VLSI/PDK/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /mnt/d/VLSI/PDK/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+check
+stat -liberty /mnt/d/VLSI/PDK/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr -noexpr synthesis/sync_fifo_netlist.v

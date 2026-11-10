@@ -1,0 +1,94 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/pdkroot/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/work/runs/FIFO3_RESUME_GLOBALPLACEMENT_20261110_01/01-openroad-globalplacement/sync_fifo.odb'…
+Reading design constraints file at '/work/synthesis/sync_fifo.sdc'…
+[INFO] No information on clock propagation in input SDC file-- propagating all clocks.
+[INFO] Setting RC values…
+[INFO RSZ-0027] Inserted 11 input buffers.
+[INFO RSZ-0028] Inserted 17 output buffers.
+[INFO RSZ-0058] Using max wire length 6335um.
+Iteration | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------
+        0 |       0 |       0 |             0 |       423
+       10 |       3 |       0 |             0 |       413
+       20 |       5 |       0 |             0 |       403
+       30 |       5 |       0 |             0 |       393
+       40 |       6 |       0 |             0 |       383
+       50 |       7 |       0 |             0 |       373
+       60 |       8 |       0 |             0 |       363
+       70 |       8 |       0 |             0 |       353
+       80 |       8 |       0 |             0 |       343
+       90 |       8 |       0 |             0 |       333
+      100 |       9 |       0 |             0 |       323
+      110 |       9 |       0 |             0 |       313
+      120 |       9 |       0 |             0 |       303
+      130 |       9 |       0 |             0 |       293
+      140 |      11 |       0 |             0 |       283
+      150 |      12 |       0 |             0 |       273
+      160 |      15 |       1 |             1 |       263
+      170 |      17 |       2 |             2 |       253
+      180 |      19 |       2 |             2 |       243
+      190 |      26 |       2 |             2 |       233
+      200 |      29 |       2 |             2 |       223
+      210 |      38 |       2 |             2 |       213
+      220 |      48 |       2 |             2 |       203
+      230 |      58 |       2 |             2 |       193
+      240 |      67 |       2 |             2 |       183
+      250 |      70 |       2 |             2 |       173
+      260 |      70 |       2 |             2 |       163
+      270 |      70 |       2 |             2 |       153
+      280 |      70 |       2 |             2 |       143
+      290 |      72 |       2 |             2 |       133
+      300 |      80 |       2 |             2 |       123
+      310 |      83 |       2 |             2 |       113
+      320 |      83 |       2 |             2 |       103
+      330 |      83 |       2 |             2 |        93
+      340 |      83 |       2 |             2 |        83
+      350 |      83 |       2 |             2 |        73
+      360 |      83 |       2 |             2 |        63
+      370 |      83 |       2 |             2 |        53
+      380 |      83 |       2 |             2 |        43
+      390 |      83 |       2 |             2 |        33
+      400 |      83 |       2 |             2 |        23
+      410 |      91 |       2 |             2 |        13
+      420 |      93 |       2 |             2 |         3
+    final |      93 |       2 |             2 |         0
+---------------------------------------------------------
+[INFO RSZ-0034] Found 2 slew violations.
+[INFO RSZ-0036] Found 2 capacitance violations.
+[INFO RSZ-0038] Inserted 2 buffers in 2 nets.
+[INFO RSZ-0039] Resized 93 instances.
+Placement Analysis
+---------------------------------
+total displacement       1473.9 u
+average displacement        2.2 u
+max displacement           13.8 u
+original HPWL            6699.8 u
+legalized HPWL           8408.7 u
+delta HPWL                   26 %
+
+[INFO DPL-0020] Mirrored 111 instances
+[INFO DPL-0021] HPWL before            8408.7 u
+[INFO DPL-0022] HPWL after             8028.6 u
+[INFO DPL-0023] HPWL delta               -4.5 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                78     292.78
+  Tap cell                                164     205.20
+  Timing Repair Buffer                     30     145.14
+  Inverter                                  2       7.51
+  Sequential cell                         145    3026.65
+  Multi-Input combinational cell          236    3111.73
+  Total                                   655    6789.01
+Writing OpenROAD database to '/work/runs/FIFO3_RESUME_REPAIRDESIGNPOSTGPL_20261110_01/01-openroad-repairdesignpostgpl/sync_fifo.odb'…
+Writing netlist to '/work/runs/FIFO3_RESUME_REPAIRDESIGNPOSTGPL_20261110_01/01-openroad-repairdesignpostgpl/sync_fifo.nl.v'…
+Writing powered netlist to '/work/runs/FIFO3_RESUME_REPAIRDESIGNPOSTGPL_20261110_01/01-openroad-repairdesignpostgpl/sync_fifo.pnl.v'…
+Writing layout to '/work/runs/FIFO3_RESUME_REPAIRDESIGNPOSTGPL_20261110_01/01-openroad-repairdesignpostgpl/sync_fifo.def'…
+Writing timing constraints to '/work/runs/FIFO3_RESUME_REPAIRDESIGNPOSTGPL_20261110_01/01-openroad-repairdesignpostgpl/sync_fifo.sdc'…

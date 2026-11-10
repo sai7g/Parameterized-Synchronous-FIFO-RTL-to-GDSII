@@ -1,0 +1,26 @@
+{
+    "nl": "/work/synthesis/sync_fifo_netlist.v",
+    "sdf": {
+        "nom_tt_025C_1v80": "/work/runs/FIFO3_MAPPED_NETLIST_STAPREPNR_20261109_1655/01-openroad-staprepnr/nom_tt_025C_1v80/sync_fifo__nom_tt_025C_1v80.sdf",
+        "nom_ss_100C_1v60": "/work/runs/FIFO3_MAPPED_NETLIST_STAPREPNR_20261109_1655/01-openroad-staprepnr/nom_ss_100C_1v60/sync_fifo__nom_ss_100C_1v60.sdf",
+        "nom_ff_n40C_1v95": "/work/runs/FIFO3_MAPPED_NETLIST_STAPREPNR_20261109_1655/01-openroad-staprepnr/nom_ff_n40C_1v95/sync_fifo__nom_ff_n40C_1v95.sdf"
+    },
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": null,
+    "lef": null,
+    "openroad-lef": null,
+    "odb": null,
+    "sdc": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "vh": null,
+    "metrics": {}
+}
